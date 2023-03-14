@@ -2,7 +2,7 @@ const displayWeekDay = document.querySelector(".weekday");
 const displayDate = document.querySelector(".date");
 const displayHour = document.querySelector(".hour");
 const body = document.querySelector('body');
-const  imageSrc = document.querySelector("img");
+
 
 const  now = new Date();
 
@@ -37,6 +37,24 @@ function formatAMPM(){
 setInterval(formatAMPM, 1000);
 
 function dynamicBackground(){
+  const time = now.getHours();
+  const  imageSrc = document.querySelector("img");
+    if( time  == 5){
+        imageSrc.src = 'assets/sunrise.jpg';
+    }
+    else if(time > 5 && time < 12){
+        imageSrc.src = 'assets/morning.jpg';
+    }
+    else if(time >=12 && time < 17){
+        imageSrc.src = 'assets/afternoon.jpg';
+    }else if(time == 17){
+        imageSrc.src = 'assets/sunset.jpg';
+    }
+    else if(time >17 && time < 21){
+        imageSrc.src = 'assets/evening.jpg';
 
-    
+    }else{
+        imageSrc.src = 'assets/night.jpg';
+    }
 }
+dynamicBackground();
