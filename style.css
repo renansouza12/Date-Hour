@@ -18,7 +18,7 @@ img{
 }
 main{
     position: absolute;
-    top: 1rem;
+    top: 3rem;
 
 }
 main .dateHour{
@@ -26,8 +26,8 @@ main .dateHour{
     color: #fff;
 }
 main h1{
-    font-size: 4rem;
-    letter-spacing: 2px;
+    font-size: 5rem;
+    letter-spacing: 4px;
 }
 main h3{
     font-size: 2rem;
